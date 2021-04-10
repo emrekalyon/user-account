@@ -8,6 +8,8 @@ import lombok.Data;
 
 @Data
 public class UserAccountsCreateRequest {
+	
+	private Long id;
 
 	@NotBlank
 	@Size(min = 3,max = 150)

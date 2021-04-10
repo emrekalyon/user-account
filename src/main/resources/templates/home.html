@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:with="lang=${#locale.language}" th:lang="${lang}">
+<head>
+<title>Home</title>
+</head>
+<body>
+	<h1>
+		<span th:text="#{welcome.message}" />
+	</h1>
+
+	<form action="#" th:action="@{'/user-accounts/add-accounts'}"
+		th:method="GET">
+		<button type="submit" class="btn">
+			<span th:text="#{msg.add}" />
+		</button>
+	</form>
+
+	<table>
+		<tr>
+			<th th:text="#{msg.id}" />
+			<th th:text="#{msg.name}" />
+			<th th:text="#{msg.phone}" />
+			<th th:text="#{msg.email}" />
+			<th th:text="#{msg.address}" />
+			<th th:text="#{msg.department}" />
+			<th th:text="#{msg.delete}" />
+			<th th:text="#{msg.update}" />
+		</tr>
+		<tr th:each="userAccount, iStat : ${userAccounts}"
+			th:style="${iStat.odd} ? 'background-color : yellow;' : 'background-color : gray'"
+			th:alt-title="${iStat.even}? 'even' : 'odd'">
+			<td th:text="${userAccount.id}" />
+			<td th:text="${userAccount.name}" />
+			<td th:text="${userAccount.phone}" />
+			<td th:text="${userAccount.email}" />
+			<td th:text="${userAccount.address}" />
+			<td th:text="${userAccount.department}" />
+			<td>
+				<form action="#"
+					th:action="@{'/user-accounts/delete/id/{id}'(id=${userAccount.id})}"
+					th:method="GET">
+					<button type="submit" class="btn">
+						<span th:text="#{msg.delete}" />
+					</button>
+				</form>
+			</td>
+			<td>
+				<form action="#"
+					th:action="@{'/user-accounts/id/{id}'(id=${userAccount.id})}"
+					th:method="GET">
+					<button type="submit" class="btn">
+						<span th:text="#{msg.update}" />
+					</button>
+				</form>
+			</td>
+		</tr>
+
+	</table>
+
+	<div th:if=${visibleForm}>
+
+		<p th:each="err : ${errorMessages}" th:text="${err}"
+			style="color: red; font-style: italic;"></p>
+		<p th:text="${successMessage}"
+			style="color: green; font-style: italic;"></p>
+
+		<form action="#" th:action="@{/user-accounts}"
+			th:object="${userAccount}" method="post">
+			<input type="hidden" th:field="*{id}" />
+			<table>
+				<tr>
+					<td><span th:text="#{msg.name}" /></td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td><span th:text="#{msg.phone}" /></td>
+					<td><input type="text" th:field="*{phone}" /></td>
+				</tr>
+				<tr>
+					<td><span th:text="#{msg.email}" /></td>
+					<td><input type="text" th:field="*{email}" /></td>
+				</tr>
+				<tr>
+					<td><span th:text="#{msg.address}" /></td>
+					<td><input type="text" th:field="*{address}" /></td>
+				</tr>
+				<tr>
+					<td><span th:text="#{msg.country}" /></td>
+					<td><input type="text" th:field="*{country}" /></td>
+				</tr>
+				<tr>
+					<td><span th:text="#{msg.department}" /></td>
+					<td><input type="text" th:field="*{department}" /></td>
+				</tr>
+			</table>
+			<br />
+			<button type="submit" th:if="${userAccount.id == null}">
+				<span th:text="#{msg.add}" />
+			</button>
+			<button type="submit" th:if="${userAccount.id != null}">
+				<span th:text="#{msg.update}" />
+			</button>
+		</form>
+
+	</div>
+
+</body>
+</html>
