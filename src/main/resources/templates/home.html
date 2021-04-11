@@ -9,9 +9,9 @@
 		<span th:text="#{welcome.message}" />
 	</h1>
 
-	<form action="#" th:action="@{'/user-accounts/add-accounts'}"
+	<form action="#" th:action="@{'/tyhmeleaf/user-accounts/add-accounts'}"
 		th:method="GET">
-		<button type="submit" class="btn">
+		<button id="show-form-button" type="submit" class="btn">
 			<span th:text="#{msg.add}" />
 		</button>
 	</form>
@@ -38,16 +38,16 @@
 			<td th:text="${userAccount.department}" />
 			<td>
 				<form action="#"
-					th:action="@{'/user-accounts/delete/id/{id}'(id=${userAccount.id})}"
+					th:action="@{'/tyhmeleaf/user-accounts/delete/id/{id}'(id=${userAccount.id})}"
 					th:method="GET">
-					<button type="submit" class="btn">
+					<button th:id="'delete-button-id-'+${userAccount.id}" type="submit" class="btn">
 						<span th:text="#{msg.delete}" />
 					</button>
 				</form>
 			</td>
 			<td>
 				<form action="#"
-					th:action="@{'/user-accounts/id/{id}'(id=${userAccount.id})}"
+					th:action="@{'/tyhmeleaf/user-accounts/id/{id}'(id=${userAccount.id})}"
 					th:method="GET">
 					<button type="submit" class="btn">
 						<span th:text="#{msg.update}" />
@@ -57,48 +57,52 @@
 		</tr>
 
 	</table>
-
+	
+	<p id="error-message" th:each="err : ${errorMessages}" th:text="${err}"
+			style="color: red; font-style: italic;"></p>
+	<p id="success-message" th:text="${successMessage}"
+			style="color: green; font-style: italic;"></p>
+	
 	<div th:if=${visibleForm}>
 
-		<p th:each="err : ${errorMessages}" th:text="${err}"
-			style="color: red; font-style: italic;"></p>
-		<p th:text="${successMessage}"
-			style="color: green; font-style: italic;"></p>
 
-		<form action="#" th:action="@{/user-accounts}"
-			th:object="${userAccount}" method="post">
-			<input type="hidden" th:field="*{id}" />
+
+		<form action="#" th:action="@{/tyhmeleaf/user-accounts}" th:object="${userAccount}" method="post">
 			<table>
 				<tr>
+					<td><span th:text="#{msg.id}" /></td>
+					<td><input id="input_id" type="text" th:field="*{id}" /></td>
+				</tr>
+				<tr>
 					<td><span th:text="#{msg.name}" /></td>
-					<td><input type="text" th:field="*{name}" /></td>
+					<td><input id="input_name" type="text" th:field="*{name}" /></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{msg.phone}" /></td>
-					<td><input type="text" th:field="*{phone}" /></td>
+					<td><input id="input_phone" type="text" th:field="*{phone}" /></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{msg.email}" /></td>
-					<td><input type="text" th:field="*{email}" /></td>
+					<td><input id="input_email" type="text" th:field="*{email}" /></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{msg.address}" /></td>
-					<td><input type="text" th:field="*{address}" /></td>
+					<td><input id="input_address" type="text" th:field="*{address}" /></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{msg.country}" /></td>
-					<td><input type="text" th:field="*{country}" /></td>
+					<td><input id="input_country"  type="text" th:field="*{country}" /></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{msg.department}" /></td>
-					<td><input type="text" th:field="*{department}" /></td>
+					<td><input id="input_department" type="text" th:field="*{department}" /></td>
 				</tr>
 			</table>
 			<br />
-			<button type="submit" th:if="${userAccount.id == null}">
+			<button id="create-new-button" type="submit" th:if="${userAccount.id == null}">
 				<span th:text="#{msg.add}" />
 			</button>
-			<button type="submit" th:if="${userAccount.id != null}">
+			<button id="update-button" type="submit" th:if="${userAccount.id != null}">
 				<span th:text="#{msg.update}" />
 			</button>
 		</form>

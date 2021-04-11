@@ -1,4 +1,4 @@
-package com.nokia.interview.controller;
+package com.nokia.interview.controller.thymeleaf;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import com.nokia.interview.service.UserAccountsService;
 
 
 @Controller
-public class WelcomeController {
+public class WelcomeThymeleafController {
 
 	@Autowired
 	private UserAccountsService userAccountService;

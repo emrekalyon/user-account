@@ -30,8 +30,8 @@ public class UserAccountsService {
 
 
 	public void createUserAccounts(final UserAccountsCreateRequest userAccountsCreateRequest) {
-		final UserAccountsEntity userAccounts = userAccountsMapper.toEntity(userAccountsCreateRequest);
 		
+		final UserAccountsEntity userAccounts = userAccountsMapper.toEntity(userAccountsCreateRequest);
 		userAccountsRepository.save(userAccounts);
 	}
 
@@ -66,6 +66,11 @@ public class UserAccountsService {
 
 	public List<UserAccounts> findAll() {
 		return userAccountsMapper.toDomainList(userAccountsRepository.findAll());
+	}
+
+
+	public boolean existsById(final Long id) {
+		return userAccountsRepository.existsById(id);
 	}
 	
 
