@@ -24,4 +24,19 @@ jobs:
           git fetch --unshallow
           git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
           git push heroku HEAD:main -f
-
+      - name: folder permissions
+        run:
+		  mkdir ${{ github.workspace }}/reports
+          chmod 777 ${{ github.workspace }}/reports
+      - name: Robot Framework Tests
+        uses: joonvena/robotframework-docker-action@v0.1
+        env:
+          BROWSER: chrome
+          ROBOT_TESTS_DIR: ${{ github.workspace }}/robot_tests/
+          ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports/
+      - name: Upload test results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+            name: reports
+            path: ${{ github.workspace }}/reports/
