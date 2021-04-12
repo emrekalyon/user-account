@@ -5,8 +5,7 @@ Suite Teardown     Close All Browsers
 
 
 *** Variables ***
-${Driver_Path}   ../driver/chromedriver
-${LOGIN URL}      https://nokia-interview.herokuapp.com/
+${LOGIN URL}      https://my-user-accounts.herokuapp.com/
 ${BROWSER}        chrome
 
 
