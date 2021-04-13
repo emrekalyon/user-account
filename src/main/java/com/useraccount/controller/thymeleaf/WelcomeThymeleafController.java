@@ -1,4 +1,4 @@
-package com.nokia.interview.controller.thymeleaf;
+package com.useraccount.controller.thymeleaf;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.nokia.interview.domain.UserAccounts;
-import com.nokia.interview.service.UserAccountsService;
+import com.useraccount.domain.UserAccounts;
+import com.useraccount.service.UserAccountsService;
 
 
 @Controller

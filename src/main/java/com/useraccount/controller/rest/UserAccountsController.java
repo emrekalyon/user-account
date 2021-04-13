@@ -1,4 +1,4 @@
-package com.nokia.interview.controller.rest;
+package com.useraccount.controller.rest;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nokia.interview.domain.UserAccounts;
-import com.nokia.interview.domain.request.UserAccountsCreateRequest;
-import com.nokia.interview.service.UserAccountsService;
+import com.useraccount.domain.UserAccounts;
+import com.useraccount.domain.request.UserAccountsCreateRequest;
+import com.useraccount.service.UserAccountsService;
 
 @RestController
 @RequestMapping("/user-accounts")

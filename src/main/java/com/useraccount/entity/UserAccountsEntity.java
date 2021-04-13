@@ -1,4 +1,4 @@
-package com.nokia.interview.entity;
+package com.useraccount.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

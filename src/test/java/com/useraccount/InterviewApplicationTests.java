@@ -1,10 +1,10 @@
-package com.nokia.interview;
+package com.useraccount;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NokiaInterviewApplicationTests {
+class InterviewApplicationTests {
 
 	@Test
 	void contextLoads() {

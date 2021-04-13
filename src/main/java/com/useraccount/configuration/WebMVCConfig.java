@@ -1,4 +1,4 @@
-package com.nokia.interview.configuration;
+package com.useraccount.configuration;
 import java.util.Locale;
 
 import org.apache.commons.lang3.ArrayUtils;
@@ -26,7 +26,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
-import com.nokia.interview.formatter.NameFormatter;
+import com.useraccount.formatter.NameFormatter;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 import nz.net.ultraq.thymeleaf.decorators.strategies.GroupingStrategy;

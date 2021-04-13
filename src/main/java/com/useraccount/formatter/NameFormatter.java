@@ -1,4 +1,4 @@
-package com.nokia.interview.formatter;
+package com.useraccount.formatter;
 
 import java.text.ParseException;
 import java.util.Locale;

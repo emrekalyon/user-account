@@ -9,10 +9,10 @@
 		<version>2.4.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nokia.interview</groupId>
-	<artifactId>nokia-Interview</artifactId>
+	<groupId>com.useraccount</groupId>
+	<artifactId>user-account</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Nokia-Interview</name>
+	<name>User-Account</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
