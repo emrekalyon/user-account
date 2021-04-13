@@ -36,5 +36,4 @@ mvn spring-boot:run
 ```
 After that open a browser and go http://localhost:8080/
 
-![Preview](https://ibb.co/TMtBs4m)
 
