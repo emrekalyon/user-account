@@ -1,8 +1,8 @@
-package com.nokia.interview.repository;
+package com.useraccount.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.nokia.interview.entity.UserAccountsEntity;
+import com.useraccount.entity.UserAccountsEntity;
 
 public interface UserAccountsRepository extends JpaRepository<UserAccountsEntity, Long>{
 

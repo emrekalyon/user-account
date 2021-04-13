@@ -1,4 +1,4 @@
-package com.nokia.interview.controller.thymeleaf;
+package com.useraccount.controller.thymeleaf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nokia.interview.domain.UserAccounts;
-import com.nokia.interview.domain.request.UserAccountsCreateRequest;
-import com.nokia.interview.service.UserAccountsService;
+import com.useraccount.domain.UserAccounts;
+import com.useraccount.domain.request.UserAccountsCreateRequest;
+import com.useraccount.service.UserAccountsService;
 
 @Controller
 @RequestMapping("/tyhmeleaf/user-accounts")

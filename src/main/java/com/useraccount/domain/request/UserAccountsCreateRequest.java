@@ -1,4 +1,4 @@
-package com.nokia.interview.domain.request;
+package com.useraccount.domain.request;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

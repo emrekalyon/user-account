@@ -1,13 +1,13 @@
-package com.nokia.interview;
+package com.useraccount;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NokiaInterviewApplication {
+public class InterviewApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NokiaInterviewApplication.class, args);
+		SpringApplication.run(InterviewApplication.class, args);
 	}
 
 }

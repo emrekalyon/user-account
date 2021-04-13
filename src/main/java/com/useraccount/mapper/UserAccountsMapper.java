@@ -1,12 +1,12 @@
-package com.nokia.interview.mapper;
+package com.useraccount.mapper;
 
 import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import com.nokia.interview.domain.UserAccounts;
-import com.nokia.interview.domain.request.UserAccountsCreateRequest;
-import com.nokia.interview.entity.UserAccountsEntity;
+import com.useraccount.domain.UserAccounts;
+import com.useraccount.domain.request.UserAccountsCreateRequest;
+import com.useraccount.entity.UserAccountsEntity;
 
 @Mapper(componentModel = "spring")
 public interface UserAccountsMapper {

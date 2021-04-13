@@ -1,4 +1,4 @@
-package com.nokia.interview.domain;
+package com.useraccount.domain;
 
 import lombok.Data;
 

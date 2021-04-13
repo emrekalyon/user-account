@@ -1,16 +1,16 @@
-package com.nokia.interview.service;
+package com.useraccount.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nokia.interview.domain.UserAccounts;
-import com.nokia.interview.domain.request.UserAccountsCreateRequest;
-import com.nokia.interview.entity.UserAccountsEntity;
-import com.nokia.interview.exception.UserNotFoundException;
-import com.nokia.interview.mapper.UserAccountsMapper;
-import com.nokia.interview.repository.UserAccountsRepository;
+import com.useraccount.domain.UserAccounts;
+import com.useraccount.domain.request.UserAccountsCreateRequest;
+import com.useraccount.entity.UserAccountsEntity;
+import com.useraccount.exception.UserNotFoundException;
+import com.useraccount.mapper.UserAccountsMapper;
+import com.useraccount.repository.UserAccountsRepository;
 
 @Service
 public class UserAccountsService {

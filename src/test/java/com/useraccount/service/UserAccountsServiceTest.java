@@ -1,4 +1,4 @@
-package com.nokia.interview.service;
+package com.useraccount.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -16,7 +16,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.TransactionSystemException;
 
-import com.nokia.interview.domain.request.UserAccountsCreateRequest;
+import com.useraccount.domain.request.UserAccountsCreateRequest;
+import com.useraccount.service.UserAccountsService;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles({"test"})

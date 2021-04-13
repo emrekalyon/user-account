@@ -1,4 +1,4 @@
-package com.nokia.interview.exception;
+package com.useraccount.exception;
 
 import lombok.Getter;
 
