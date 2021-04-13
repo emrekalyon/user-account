@@ -15,6 +15,7 @@ Application include Rest Api & Tyhmeleaf controller together
 ## Tech Stack
 
 * [Spring Boot](https://projects.spring.io/spring-boot/)
+* [H2 Database](https://www.h2database.com/html/main.html)
 * [Thymeleaf](https://www.thymeleaf.org/)
 * [Junit5](https://junit.org/junit5/)
 * [Robot Framework](https://robotframework.org/)
