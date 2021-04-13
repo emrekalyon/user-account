@@ -3,6 +3,8 @@
 
 This is a simple application to learn  Spring Tymeleaf, Robot Framework and Githup actions. The application run on  Heroku.
 
+Application include Rest Api & Tyhmeleaf controller together
+
 * [Online Demo](https://my-user-accounts.herokuapp.com)
 
 ## Requirements
