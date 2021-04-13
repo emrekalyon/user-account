@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: maven clean install
+      - name: maven test
         run: |
           mvn test
       - name: Deploy to Heroku
